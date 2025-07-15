@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate and Data Science/AI Curriculum</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .program-info {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            font-size: 14px;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+            line-height: 1.4;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.3s ease;
+        }
+        
+        .phase-header {
+            background: linear-gradient(135deg, #e74c3c, #f39c12) !important;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .phase-header td {
+            padding: 20px;
+            border: none;
+        }
+        
+        .module-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 15px;
+        }
+        
+        .duration {
+            background: #e8f6f3;
+            color: #27ae60;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .topics-list {
+            max-height: none;
+            min-height: auto;
+            overflow-y: visible;
+            padding-right: 10px;
+            height: auto;
+        }
+        
+        .topics-list::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        .topics-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 2px;
+        }
+        
+        .topics-list::-webkit-scrollbar-thumb {
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .topic-category {
+            font-weight: 600;
+            color: #2980b9;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        
+        .topic-item {
+            margin-left: 10px;
+            margin-bottom: 2px;
+            color: #34495e;
+        }
+        
+        .hands-on {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        
+        .tools {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        
+        .soft-skills {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 4px;
+        }
+        
+        .resources-box {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .resource-category {
+            font-weight: 600;
+            color: #2e7d32;
+            margin-bottom: 4px;
+            margin-top: 8px;
+        }
+        
+        .resource-link {
+            color: #1976d2;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 2px;
+            margin-left: 8px;
+        }
+        
+        .resource-link:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+        
+        .hackathon-special {
+            background: linear-gradient(135deg, #ff6b6b, #ffa726) !important;
+            color: white;
+        }
+        
+        .internship-special {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d) !important;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 15px; margin: 10px; }
+            h1 { font-size: 1.8em; }
+            table { font-size: 12px; }
+            th, td { padding: 8px 6px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>BSc Computer Science 4th Year Honours</h1>
+        <div class="program-info">
+            <strong>Climate and Data Science/AI Curriculum</strong><br>
+            Duration: 12 months (July 2025 - June 2026) | Target: 100 students | Focus: Climate disaster prediction and response
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Module & Timeline</th>
+                        <th style="width: 35%;">Topics Covered</th>
+                        <th style="width: 25%;">Hands-on Activities & Tools</th>
+                        <th style="width: 25%;">Open Source Resource Links</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- PHASE 1 -->
+                    <tr class="phase-header">
+                        <td colspan="4">PHASE 1: FOUNDATIONAL COURSE (July - October 2025)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 1: Data Science Fundamentals</div>
+                            <div class="duration">4 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Data Science Lifecycle</div>
+                                <div class="topic-item">• Problem definition and hypothesis</div>
+                                <div class="topic-item">• Data collection and preprocessing</div>
+                                <div class="topic-item">• Model building and validation</div>
+                                
+                                <div class="topic-category">Basic Statistics & Math for Data Science</div>
+                                <div class="topic-item">• Descriptive statistics (mean, median, mode, variance)</div>
+                                <div class="topic-item">• Probability distributions and sampling</div>
+                                <div class="topic-item">• Hypothesis testing and confidence intervals</div>
+                                <div class="topic-item">• Linear algebra basics (vectors, matrices)</div>
+                                <div class="topic-item">• Calculus fundamentals for optimization</div>
+                                <div class="topic-item">• Bayesian thinking and conditional probability</div>
+                                
+                                <div class="topic-category">Data Types & Structures (Climate Focus)</div>
+                                <div class="topic-item">• Structured data: CSV, databases, APIs</div>
+                                <div class="topic-item">• Semi-structured: JSON, XML weather feeds</div>
+                                <div class="topic-item">• Unstructured: Satellite images, sensor logs</div>
+                                <div class="topic-item">• Time series: Temperature, rainfall, wind patterns</div>
+                                <div class="topic-item">• Geospatial: Coordinates, polygons, raster grids</div>
+                                <div class="topic-item">• Real-time streams: IoT sensors, weather stations</div>
+                                <div class="topic-item">• Climate-specific formats: NetCDF, GRIB, HDF5</div>
+                                
+                                <div class="topic-category">Statistical Analysis</div>
+                                <div class="topic-item">• Time series analysis basics</div>
+                                <div class="topic-item">• Correlation and regression</div>
+                                <div class="topic-item">• Trend analysis and seasonality</div>
+                                
+                                <div class="topic-category">Python for Climate Data</div>
+                                <div class="topic-item">• NumPy and Pandas</div>
+                                <div class="topic-item">• Matplotlib and Seaborn</div>
+                                <div class="topic-item">• Geospatial data processing</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activity:</strong><br>
+                                Complete climate data analysis project: Students will work with real meteorological datasets from IMD to analyze 10-year temperature and rainfall trends for a specific region, create comprehensive visualizations using Python (Pandas, Matplotlib), and present findings in a slide deck with data-driven insights.
+                            </div>
+                            <div class="tools">
+                                <strong>Tools Training:</strong><br>
+                                • Python Environment Setup<br>
+                                • Jupyter Notebooks<br>
+                                • Anaconda distribution<br>
+                                • Git version control basics
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Data storytelling techniques<br>
+                                • Creating compelling visualizations<br>
+                                • Technical presentation
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">📊 Statistics & Math</div>
+                                <a href="https://www.khanacademy.org/math/statistics-probability" class="resource-link">Khan Academy Statistics</a>
+                                <a href="https://seeing-theory.brown.edu/" class="resource-link">Seeing Theory (Brown University)</a>
+                                <a href="https://github.com/unpingco/Python-for-Probability-Statistics-and-Machine-Learning" class="resource-link">Python for Stats & ML (GitHub)</a>
+                                
+                                <div class="resource-category">🐍 Python Learning</div>
+                                <a href="https://www.python.org/about/gettingstarted/" class="resource-link">Python.org Official Tutorial</a>
+                                <a href="https://github.com/jakevdp/PythonDataScienceHandbook" class="resource-link">Python Data Science Handbook (GitHub)</a>
+                                <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/" class="resource-link">Pandas Official Tutorials</a>
+                                
+                                <div class="resource-category">📊 Data Visualization</div>
+                                <a href="https://matplotlib.org/stable/tutorials/index.html" class="resource-link">Matplotlib Tutorials</a>
+                                <a href="https://seaborn.pydata.org/tutorial.html" class="resource-link">Seaborn Tutorial Gallery</a>
+                                <a href="https://plotly.com/python/getting-started/" class="resource-link">Plotly Python Documentation</a>
+                                
+                                <div class="resource-category">🌍 Climate Datasets</div>
+                                <a href="https://mausam.imd.gov.in/imd_latest/contents/index_data.php" class="resource-link">India Meteorological Department</a>
+                                <a href="https://www.ncei.noaa.gov/data/" class="resource-link">NOAA Climate Data</a>
+                                <a href="https://github.com/awesomedata/awesome-public-datasets#climate-weather" class="resource-link">Awesome Climate Datasets</a>
+                                
+                                <div class="resource-category">💻 Development Tools</div>
+                                <a href="https://jupyter.org/try" class="resource-link">Jupyter Notebook Try Online</a>
+                                <a href="https://www.anaconda.com/products/distribution" class="resource-link">Anaconda Distribution</a>
+                                <a href="https://git-scm.com/book/en/v2" class="resource-link">Pro Git Book (Free)</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 2: AI & Machine Learning Intro</div>
+                            <div class="duration">4 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">AI/ML Fundamentals</div>
+                                <div class="topic-item">• Types of machine learning</div>
+                                <div class="topic-item">• Bias-variance tradeoff</div>
+                                <div class="topic-item">• Cross-validation techniques</div>
+                                <div class="topic-item">• Model evaluation metrics</div>
+                                
+                                <div class="topic-category">Supervised Learning</div>
+                                <div class="topic-item">• Linear and logistic regression</div>
+                                <div class="topic-item">• Decision trees and random forests</div>
+                                <div class="topic-item">• Support vector machines</div>
+                                <div class="topic-item">• Ensemble methods</div>
+                                
+                                <div class="topic-category">Unsupervised Learning</div>
+                                <div class="topic-item">• K-means clustering</div>
+                                <div class="topic-item">• PCA and dimensionality reduction</div>
+                                <div class="topic-item">• Anomaly detection</div>
+                                
+                                <div class="topic-category">Deep Learning Basics</div>
+                                <div class="topic-item">• Neural networks fundamentals</div>
+                                <div class="topic-item">• Backpropagation algorithm</div>
+                                <div class="topic-item">• TensorFlow/Keras introduction</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activity:</strong><br>
+                                Build an end-to-end weather prediction system: Students will develop a complete machine learning pipeline using historical weather data, implementing multiple algorithms (regression, classification, clustering), comparing model performance, and deploying a working prediction model using TensorFlow/Keras with proper evaluation metrics.
+                            </div>
+                            <div class="tools">
+                                <strong>Tools Training:</strong><br>
+                                • Scikit-learn Library<br>
+                                • TensorFlow/Keras Basics<br>
+                                • Model selection and evaluation<br>
+                                • Algorithm implementations
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Technical presentation of ML<br>
+                                • Peer review and feedback<br>
+                                • Collaborative coding
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">🤖 Machine Learning</div>
+                                <a href="https://scikit-learn.org/stable/tutorial/index.html" class="resource-link">Scikit-learn User Guide</a>
+                                <a href="https://github.com/ageron/handson-ml3" class="resource-link">Hands-On ML with Scikit-Learn and TensorFlow</a>
+                                <a href="https://www.tensorflow.org/tutorials" class="resource-link">TensorFlow Official Tutorials</a>
+                                
+                                <div class="resource-category">📚 Free Courses</div>
+                                <a href="https://www.coursera.org/learn/machine-learning" class="resource-link">Andrew Ng's ML Course (Audit Free)</a>
+                                <a href="https://www.edx.org/course/introduction-to-artificial-intelligence-ai" class="resource-link">MIT Introduction to AI (edX)</a>
+                                <a href="https://github.com/microsoft/ML-For-Beginners" class="resource-link">Microsoft ML for Beginners</a>
+                                
+                                <div class="resource-category">🧠 Deep Learning</div>
+                                <a href="https://www.deeplearningbook.org/" class="resource-link">Deep Learning Book (Free Online)</a>
+                                <a href="https://keras.io/getting_started/" class="resource-link">Keras Getting Started Guide</a>
+                                <a href="https://pytorch.org/tutorials/" class="resource-link">PyTorch Tutorials</a>
+                                
+                                <div class="resource-category">📈 Practice Datasets</div>
+                                <a href="https://www.kaggle.com/datasets" class="resource-link">Kaggle Datasets</a>
+                                <a href="https://archive.ics.uci.edu/ml/index.php" class="resource-link">UCI ML Repository</a>
+                                <a href="https://github.com/awesomedata/awesome-public-datasets" class="resource-link">Awesome Public Datasets</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 3: GIS & Geospatial Analysis</div>
+                            <div class="duration">3 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">GIS Fundamentals</div>
+                                <div class="topic-item">• Coordinate systems and projections</div>
+                                <div class="topic-item">• Vector vs. raster data</div>
+                                <div class="topic-item">• Spatial relationships</div>
+                                <div class="topic-item">• Geocoding and transformations</div>
+                                
+                                <div class="topic-category">Geospatial Data Sources</div>
+                                <div class="topic-item">• Satellite imagery (Landsat, Sentinel)</div>
+                                <div class="topic-item">• OpenStreetMap data</div>
+                                <div class="topic-item">• Government spatial databases</div>
+                                <div class="topic-item">• Real-time sensor networks</div>
+                                
+                                <div class="topic-category">Spatial Analysis</div>
+                                <div class="topic-item">• Buffer and overlay operations</div>
+                                <div class="topic-item">• Spatial interpolation</div>
+                                <div class="topic-item">• Hot spot analysis</div>
+                                <div class="topic-item">• Network analysis</div>
+                                
+                                <div class="topic-category">Climate Mapping</div>
+                                <div class="topic-item">• Flood mapping and modeling</div>
+                                <div class="topic-item">• Drought monitoring</div>
+                                <div class="topic-item">• Risk zone identification</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activity:</strong><br>
+                                Create comprehensive flood risk assessment maps: Students will develop interactive geospatial applications using QGIS and Python libraries, processing satellite imagery from Google Earth Engine, performing spatial analysis operations, and building web-based dashboards to visualize flood risk zones for a coastal region in India.
+                            </div>
+                            <div class="tools">
+                                <strong>Tools Training:</strong><br>
+                                • QGIS Software<br>
+                                • Google Earth Engine<br>
+                                • Python Geospatial Libraries<br>
+                                • Geopandas, Folium, Rasterio
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Map design principles<br>
+                                • Spatial data visualization<br>
+                                • Technical writing for GIS
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">🗺️ GIS Software</div>
+                                <a href="https://qgis.org/en/site/forusers/download.html" class="resource-link">QGIS Download (Free)</a>
+                                <a href="https://docs.qgis.org/3.28/en/docs/training_manual/" class="resource-link">QGIS Training Manual</a>
+                                <a href="https://www.qgistutorials.com/en/" class="resource-link">QGIS Tutorials and Tips</a>
+                                
+                                <div class="resource-category">🐍 Python Geospatial</div>
+                                <a href="https://geopandas.org/en/stable/getting_started.html" class="resource-link">GeoPandas Documentation</a>
+                                <a href="https://python-visualization.github.io/folium/" class="resource-link">Folium Documentation</a>
+                                <a href="https://rasterio.readthedocs.io/en/latest/" class="resource-link">Rasterio Documentation</a>
+                                
+                                <div class="resource-category">🛰️ Satellite Data</div>
+                                <a href="https://earthengine.google.com/" class="resource-link">Google Earth Engine</a>
+                                <a href="https://www.usgs.gov/landsat-missions/landsat-data-access" class="resource-link">USGS Landsat Data</a>
+                                <a href="https://scihub.copernicus.eu/" class="resource-link">Copernicus Open Access Hub</a>
+                                
+                                <div class="resource-category">📦 Open Data</div>
+                                <a href="https://www.openstreetmap.org/" class="resource-link">OpenStreetMap</a>
+                                <a href="https://www.naturalearthdata.com/" class="resource-link">Natural Earth Data</a>
+                                <a href="https://data.gov.in/" class="resource-link">India Open Government Data</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 4: Climate Science & Disaster Management</div>
+                            <div class="duration">3 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Climate Change Basics</div>
+                                <div class="topic-item">• Global warming and greenhouse effect</div>
+                                <div class="topic-item">• Climate vs. weather systems</div>
+                                <div class="topic-item">• Carbon cycle and emissions</div>
+                                <div class="topic-item">• Climate feedback loops</div>
+                                
+                                <div class="topic-category">Climate Disasters in India</div>
+                                <div class="topic-item">• Floods, cyclones, droughts, heatwaves</div>
+                                <div class="topic-item">• Monsoon patterns and variability</div>
+                                <div class="topic-item">• Regional climate vulnerabilities</div>
+                                <div class="topic-item">• Economic impact assessment</div>
+                                
+                                <div class="topic-category">Disaster Risk Reduction</div>
+                                <div class="topic-item">• Sendai Framework</div>
+                                <div class="topic-item">• Early warning systems</div>
+                                <div class="topic-item">• Vulnerability assessment</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activity:</strong><br>
+                                Develop a community-based disaster preparedness plan: Students will conduct vulnerability assessments using climate science principles, analyze historical disaster data, design early warning frameworks following the Sendai Framework, and create a comprehensive disaster management strategy presentation for a specific Indian region.
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Technical presentation skills<br>
+                                • Scientific writing basics<br>
+                                • Report writing for disaster management
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">🌡️ Climate Science</div>
+                                <a href="https://www.ipcc.ch/reports/" class="resource-link">IPCC Assessment Reports</a>
+                                <a href="https://climate.nasa.gov/resources/" class="resource-link">NASA Climate Resources</a>
+                                <a href="https://www.climate.gov/teaching" class="resource-link">Climate.gov Educational Resources</a>
+                                
+                                <div class="resource-category">🚨 Disaster Management</div>
+                                <a href="https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030" class="resource-link">Sendai Framework Official</a>
+                                <a href="https://ndma.gov.in/" class="resource-link">National Disaster Management Authority</a>
+                                <a href="https://www.undrr.org/terminology" class="resource-link">UNDRR Disaster Risk Terminology</a>
+                                
+                                <div class="resource-category">📊 Climate Data & Models</div>
+                                <a href="https://cds.climate.copernicus.eu/" class="resource-link">Copernicus Climate Data Store</a>
+                                <a href="https://climateknowledgeportal.worldbank.org/" class="resource-link">World Bank Climate Portal</a>
+                                <a href="https://www.nccs.nasa.gov/services/data-collections" class="resource-link">NASA Climate Data Collections</a>
+                                
+                                <div class="resource-category">📚 Educational Materials</div>
+                                <a href="https://www.edx.org/course/climate-change-science-and-policy" class="resource-link">Climate Change Science (edX)</a>
+                                <a href="https://www.coursera.org/learn/climate-change" class="resource-link">Climate Change and Health (Coursera)</a>
+                                <a href="https://github.com/climate-machine/Oceananigans.jl" class="resource-link">Climate Modeling Tools (GitHub)</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- PHASE 2 -->
+                    <tr class="phase-header">
+                        <td colspan="4">PHASE 2: CLIMATE APPLICATION-BASED LEARNING (December 2025 - February 2026)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 5: Advanced ML for Climate</div>
+                            <div class="duration">4 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Time Series Forecasting</div>
+                                <div class="topic-item">• ARIMA models</div>
+                                <div class="topic-item">• Seasonal decomposition</div>
+                                <div class="topic-item">• Prophet forecasting</div>
+                                <div class="topic-item">• LSTM networks for time series</div>
+                                
+                                <div class="topic-category">Deep Learning for Climate</div>
+                                <div class="topic-item">• CNNs for spatial data</div>
+                                <div class="topic-item">• RNNs and LSTM networks</div>
+                                <div class="topic-item">• Transformer models</div>
+                                <div class="topic-item">• Attention mechanisms</div>
+                                
+                                <div class="topic-category">Ensemble Methods</div>
+                                <div class="topic-item">• Bagging and boosting</div>
+                                <div class="topic-item">• XGBoost and LightGBM</div>
+                                <div class="topic-item">• Model stacking techniques</div>
+                                
+                                <div class="topic-category">Model Evaluation</div>
+                                <div class="topic-item">• Skill scores and metrics</div>
+                                <div class="topic-item">• Hindcasting techniques</div>
+                                <div class="topic-item">• Uncertainty quantification</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activities:</strong><br>
+                                • Seasonal rainfall prediction<br>
+                                • Temperature forecasting with LSTM<br>
+                                • Extreme weather event prediction<br>
+                                • Multi-model ensemble development
+                            </div>
+                            <div class="tools">
+                                <strong>Tools Training:</strong><br>
+                                • Statsmodels for time series<br>
+                                • Prophet for forecasting<br>
+                                • Advanced TensorFlow features<br>
+                                • PyTorch basics
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Model interpretation<br>
+                                • Technical communication<br>
+                                • Peer review of performance
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">📈 Time Series Analysis</div>
+                                <a href="https://www.statsmodels.org/stable/tsa.html" class="resource-link">Statsmodels Time Series</a>
+                                <a href="https://facebook.github.io/prophet/" class="resource-link">Prophet by Facebook</a>
+                                <a href="https://github.com/ourownstory/neural_prophet" class="resource-link">Neural Prophet (GitHub)</a>
+                                
+                                <div class="resource-category">🧠 Advanced Deep Learning</div>
+                                <a href="https://pytorch.org/tutorials/beginner/nlp/sequence_models_tutorial.html" class="resource-link">PyTorch LSTM Tutorial</a>
+                                <a href="https://huggingface.co/transformers/" class="resource-link">Hugging Face Transformers</a>
+                                <a href="https://github.com/microsoft/DeepSpeed" class="resource-link">DeepSpeed (Microsoft)</a>
+                                
+                                <div class="resource-category">🚀 Ensemble Methods</div>
+                                <a href="https://xgboost.readthedocs.io/en/stable/" class="resource-link">XGBoost Documentation</a>
+                                <a href="https://lightgbm.readthedocs.io/en/latest/" class="resource-link">LightGBM Documentation</a>
+                                <a href="https://github.com/ml-tooling/ml-workspace" class="resource-link">ML Workspace (All-in-one)</a>
+                                
+                                <div class="resource-category">📊 Climate ML Papers</div>
+                                <a href="https://arxiv.org/list/physics.ao-ph/recent" class="resource-link">arXiv Atmospheric Physics</a>
+                                <a href="https://github.com/pangeo-data/pangeo" class="resource-link">Pangeo Climate Data Tools</a>
+                                <a href="https://github.com/climatemachine/ClimateMachine.jl" class="resource-link">Climate Machine (Julia)</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 6: Generative AI & LLMs</div>
+                            <div class="duration">4 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Generative AI Fundamentals</div>
+                                <div class="topic-item">• Understanding Large Language Models (LLMs)</div>
+                                <div class="topic-item">• Transformer architecture basics</div>
+                                <div class="topic-item">• Training vs. fine-tuning vs. inference</div>
+                                <div class="topic-item">• Prompt engineering principles</div>
+                                
+                                <div class="topic-category">Popular AI Platforms</div>
+                                <div class="topic-item">• ChatGPT and GPT models</div>
+                                <div class="topic-item">• Claude and Anthropic's approach</div>
+                                <div class="topic-item">• Perplexity for research applications</div>
+                                <div class="topic-item">• Google Gemini and Bard</div>
+                                
+                                <div class="topic-category">Building Custom LLMs</div>
+                                <div class="topic-item">• Fine-tuning pre-trained models</div>
+                                <div class="topic-item">• Retrieval-Augmented Generation (RAG)</div>
+                                <div class="topic-item">• Vector databases and embeddings</div>
+                                <div class="topic-item">• Model evaluation and safety</div>
+                                
+                                <div class="topic-category">Climate Applications</div>
+                                <div class="topic-item">• AI-powered climate research assistance</div>
+                                <div class="topic-item">• Automated report generation</div>
+                                <div class="topic-item">• Climate data interpretation</div>
+                                <div class="topic-item">• Conversational climate chatbots</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activity:</strong><br>
+                                Build climate-focused AI assistant: Students will create a custom LLM application using fine-tuning techniques, implement RAG for climate data retrieval, develop conversational interfaces for climate queries, and deploy a working chatbot that can answer climate science questions and generate climate reports.
+                            </div>
+                            <div class="tools">
+                                <strong>Tools Training:</strong><br>
+                                • Hugging Face Transformers<br>
+                                • OpenAI API and GPT models<br>
+                                • LangChain framework<br>
+                                • Vector databases (Pinecone, Chroma)
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • AI ethics and responsible use<br>
+                                • Prompt engineering mastery<br>
+                                • AI-human collaboration
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">🤖 Open Source LLMs</div>
+                                <a href="https://huggingface.co/models" class="resource-link">Hugging Face Model Hub</a>
+                                <a href="https://github.com/microsoft/LoRA" class="resource-link">LoRA Fine-tuning (Microsoft)</a>
+                                <a href="https://github.com/tatsu-lab/stanford_alpaca" class="resource-link">Stanford Alpaca</a>
+                                
+                                <div class="resource-category">🔗 RAG & Vector DBs</div>
+                                <a href="https://github.com/langchain-ai/langchain" class="resource-link">LangChain Framework</a>
+                                <a href="https://github.com/chroma-core/chroma" class="resource-link">Chroma Vector Database</a>
+                                <a href="https://github.com/facebookresearch/faiss" class="resource-link">FAISS by Facebook</a>
+                                
+                                <div class="resource-category">💬 Chatbot Development</div>
+                                <a href="https://github.com/streamlit/streamlit" class="resource-link">Streamlit for Web Apps</a>
+                                <a href="https://github.com/gradio-app/gradio" class="resource-link">Gradio for ML Interfaces</a>
+                                <a href="https://github.com/microsoft/botframework-sdk" class="resource-link">Microsoft Bot Framework</a>
+                                
+                                <div class="resource-category">📚 Learning Resources</div>
+                                <a href="https://github.com/openai/openai-cookbook" class="resource-link">OpenAI Cookbook</a>
+                                <a href="https://github.com/anthropics/anthropic-sdk-python" class="resource-link">Anthropic Python SDK</a>
+                                <a href="https://github.com/guidance-ai/guidance" class="resource-link">Guidance for LLM Control</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 7: Data Visualization & Dashboards</div>
+                            <div class="duration">2 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Advanced Visualization</div>
+                                <div class="topic-item">• Interactive visualizations</div>
+                                <div class="topic-item">• Dashboard design principles</div>
+                                <div class="topic-item">• Storytelling with data</div>
+                                <div class="topic-item">• Color theory and accessibility</div>
+                                
+                                <div class="topic-category">Climate Data Visualization</div>
+                                <div class="topic-item">• Weather maps and charts</div>
+                                <div class="topic-item">• Time series visualization</div>
+                                <div class="topic-item">• Geospatial visualization</div>
+                                <div class="topic-item">• Uncertainty visualization</div>
+                                
+                                <div class="topic-category">Dashboard Development</div>
+                                <div class="topic-item">• User interface design</div>
+                                <div class="topic-item">• Real-time data updates</div>
+                                <div class="topic-item">• Interactive filtering</div>
+                                <div class="topic-item">• Mobile-responsive design</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Hands-on Activity:</strong><br>
+                                Create comprehensive climate intelligence dashboard: Students will develop interactive, web-based visualization platforms using open-source tools, implement real-time data feeds, design mobile-responsive interfaces, and build stakeholder-specific reporting tools for climate decision-making.
+                            </div>
+                            <div class="tools">
+                                <strong>Tools Training:</strong><br>
+                                • Plotly Dash for Python dashboards<br>
+                                • D3.js for custom visualizations<br>
+                                • Observable for data storytelling<br>
+                                • Streamlit for rapid prototyping
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • User experience design<br>
+                                • Client presentation skills<br>
+                                • Feedback incorporation
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">📊 Interactive Dashboards</div>
+                                <a href="https://dash.plotly.com/" class="resource-link">Plotly Dash Framework</a>
+                                <a href="https://streamlit.io/" class="resource-link">Streamlit Documentation</a>
+                                <a href="https://panel.holoviz.org/" class="resource-link">Panel by HoloViz</a>
+                                
+                                <div class="resource-category">🎨 Data Visualization</div>
+                                <a href="https://d3js.org/" class="resource-link">D3.js Official Site</a>
+                                <a href="https://observablehq.com/" class="resource-link">Observable (Data Notebooks)</a>
+                                <a href="https://github.com/altair-viz/altair" class="resource-link">Altair Statistical Visualization</a>
+                                
+                                <div class="resource-category">🗺️ Geospatial Visualization</div>
+                                <a href="https://deck.gl/" class="resource-link">Deck.gl for WebGL</a>
+                                <a href="https://kepler.gl/" class="resource-link">Kepler.gl by Uber</a>
+                                <a href="https://github.com/pydeck/pydeck" class="resource-link">PyDeck for Python</a>
+                                
+                                <div class="resource-category">🎯 Design Resources</div>
+                                <a href="https://colorbrewer2.org/" class="resource-link">ColorBrewer for Maps</a>
+                                <a href="https://github.com/financial-times/chart-doctor" class="resource-link">Financial Times Chart Doctor</a>
+                                <a href="https://datavizproject.com/" class="resource-link">Data Viz Project Catalog</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- HACKATHON -->
+                    <tr class="hackathon-special">
+                        <td>
+                            <div class="module-title" style="color: white;">🏆 CLIMATE TECH HACKATHON</div>
+                            <div class="duration" style="background: rgba(255,255,255,0.2); color: white;">2 weeks</div>
+                        </td>
+                        <td style="color: white;">
+                            <div class="topics-list">
+                                <div class="topic-category" style="color: #fff3cd;">Challenge Categories:</div>
+                                <div class="topic-item" style="color: white;">• Early Warning Systems - AI-powered prediction and alerts</div>
+                                <div class="topic-item" style="color: white;">• Climate Risk Assessment - Vulnerability mapping tools</div>
+                                <div class="topic-item" style="color: white;">• Resource Management - Water/evacuation optimization</div>
+                                <div class="topic-item" style="color: white;">• Community Engagement - Mobile apps and platforms</div>
+                                
+                                <div class="topic-category" style="color: #fff3cd;">Deliverables:</div>
+                                <div class="topic-item" style="color: white;">• Working prototype or MVP</div>
+                                <div class="topic-item" style="color: white;">• Technical documentation</div>
+                                <div class="topic-item" style="color: white;">• Business plan/implementation strategy</div>
+                                <div class="topic-item" style="color: white;">• 10-minute pitch presentation</div>
+                                
+                                <div class="topic-category" style="color: #fff3cd;">Judging Criteria:</div>
+                                <div class="topic-item" style="color: white;">• Technical innovation and implementation</div>
+                                <div class="topic-item" style="color: white;">• Real-world applicability and impact</div>
+                                <div class="topic-item" style="color: white;">• Presentation quality and communication</div>
+                            </div>
+                        </td>
+                        <td style="color: white;">
+                            <div class="hands-on" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4);">
+                                <strong>Hackathon Project:</strong><br>
+                                Teams develop complete climate tech solutions over 2 weeks, from problem identification and data collection to prototype development and business plan creation, culminating in professional pitch presentations to industry judges with focus on real-world implementation potential.
+                            </div>
+                            <div class="soft-skills" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4);">
+                                <strong>Soft Skills:</strong><br>
+                                • Team leadership and collaboration<br>
+                                • Time management under pressure<br>
+                                • Pitch presentation skills<br>
+                                • Networking and communication
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box" style="background: rgba(255,255,255,0.9); color: #2c3e50;">
+                                <div class="resource-category">🏗️ Rapid Prototyping</div>
+                                <a href="https://github.com/streamlit/streamlit" class="resource-link">Streamlit for Quick Apps</a>
+                                <a href="https://colab.research.google.com/" class="resource-link">Google Colab (Free GPU)</a>
+                                <a href="https://vercel.com/" class="resource-link">Vercel for Deployment</a>
+                                
+                                <div class="resource-category">📋 Project Management</div>
+                                <a href="https://github.com/features/issues" class="resource-link">GitHub Issues & Projects</a>
+                                <a href="https://trello.com/" class="resource-link">Trello (Free Version)</a>
+                                <a href="https://slack.com/" class="resource-link">Slack for Team Communication</a>
+                                
+                                <div class="resource-category">💼 Business Planning</div>
+                                <a href="https://www.canva.com/business-plan/" class="resource-link">Canva Business Plan Templates</a>
+                                <a href="https://pitchdeck.improvepresentation.com/" class="resource-link">Pitch Deck Templates</a>
+                                <a href="https://www.mindtools.com/pages/article/newTMC_05.htm" class="resource-link">SWOT Analysis Guide</a>
+                                
+                                <div class="resource-category">🎤 Presentation Tools</div>
+                                <a href="https://www.google.com/slides/about/" class="resource-link">Google Slides</a>
+                                <a href="https://prezi.com/" class="resource-link">Prezi (Free Version)</a>
+                                <a href="https://github.com/hakimel/reveal.js/" class="resource-link">Reveal.js for Web Presentations</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- PHASE 3 -->
+                    <tr class="phase-header">
+                        <td colspan="4">PHASE 3: PRACTICAL APPLICATION (March - May 2026)</td>
+                    </tr>
+                    
+                    <tr class="internship-special">
+                        <td>
+                            <div class="module-title" style="color: white;">Module 9: Industry Internship</div>
+                            <div class="duration" style="background: rgba(255,255,255,0.2); color: white;">10 weeks</div>
+                        </td>
+                        <td style="color: white;">
+                            <div class="topics-list">
+                                <div class="topic-category" style="color: #e8f6f3;">Internship Tracks:</div>
+                                <div class="topic-item" style="color: white;">• Climate Tech Startups - prediction models, risk tools</div>
+                                <div class="topic-item" style="color: white;">• Financial Sector - climate risk modeling, ESG analysis</div>
+                                <div class="topic-item" style="color: white;">• Government/NGOs - policy analysis, monitoring systems</div>
+                                <div class="topic-item" style="color: white;">• Consulting Firms - client assessments, strategy development</div>
+                                
+                                <div class="topic-category" style="color: #e8f6f3;">Project Requirements:</div>
+                                <div class="topic-item" style="color: white;">• Real-world problem solving</div>
+                                <div class="topic-item" style="color: white;">• End-to-end solution development</div>
+                                <div class="topic-item" style="color: white;">• Stakeholder engagement</div>
+                                <div class="topic-item" style="color: white;">• Impact measurement and reporting</div>
+                                
+                                <div class="topic-category" style="color: #e8f6f3;">Mentorship Program:</div>
+                                <div class="topic-item" style="color: white;">• Industry mentor assignment</div>
+                                <div class="topic-item" style="color: white;">• Weekly progress reviews</div>
+                                <div class="topic-item" style="color: white;">• Technical guidance and support</div>
+                                <div class="topic-item" style="color: white;">• Career development discussions</div>
+                            </div>
+                        </td>
+                        <td style="color: white;">
+                            <div class="hands-on" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4);">
+                                <strong>Industry Project:</strong><br>
+                                Students work on real-world industry projects, from stakeholder requirement gathering and technical solution design to full implementation and impact assessment, with professional mentorship and presentation to industry panels for potential job placement.
+                            </div>
+                            <div class="soft-skills" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4);">
+                                <strong>Soft Skills:</strong><br>
+                                • Professional communication<br>
+                                • Industry networking<br>
+                                • Project management<br>
+                                • Client interaction skills
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box" style="background: rgba(255,255,255,0.9); color: #2c3e50;">
+                                <div style="text-align: center; padding: 20px; color: #666; font-style: italic;">
+                                    Resources provided by industry partners<br>
+                                    and internship coordinators
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 10: Capstone Project & Portfolio</div>
+                            <div class="duration">4 weeks</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Project Categories:</div>
+                                <div class="topic-item">• Predictive Analytics - weather/climate models</div>
+                                <div class="topic-item">• Computer Vision - satellite imagery analysis</div>
+                                <div class="topic-item">• IoT Systems - environmental monitoring networks</div>
+                                <div class="topic-item">• Decision Support - policy impact modeling</div>
+                                
+                                <div class="topic-category">Portfolio Development:</div>
+                                <div class="topic-item">• Professional portfolio website</div>
+                                <div class="topic-item">• Technical blog posts</div>
+                                <div class="topic-item">• Video demonstrations</div>
+                                <div class="topic-item">• Case study documentation</div>
+                                
+                                <div class="topic-category">LinkedIn Optimization:</div>
+                                <div class="topic-item">• Professional summary writing</div>
+                                <div class="topic-item">• Skills and endorsements</div>
+                                <div class="topic-item">• Project highlights</div>
+                                <div class="topic-item">• Industry connections</div>
+                                
+                                <div class="topic-category">Technical Writing:</div>
+                                <div class="topic-item">• Research papers or articles</div>
+                                <div class="topic-item">• Documentation and tutorials</div>
+                                <div class="topic-item">• Social media content strategy</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Capstone Project:</strong><br>
+                                Students develop comprehensive climate tech solutions from concept to deployment, building professional portfolios with technical documentation, creating industry-ready presentations, and establishing online presence through LinkedIn optimization and technical blog creation.
+                            </div>
+                            <div class="tools">
+                                <strong>Portfolio Tools:</strong><br>
+                                • GitHub Pages for websites<br>
+                                • LinkedIn profile tools<br>
+                                • Video editing software<br>
+                                • Blog platforms
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Advanced presentation skills<br>
+                                • Professional networking<br>
+                                • Personal branding<br>
+                                • Technical writing
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div style="text-align: center; padding: 20px; color: #666; font-style: italic;">
+                                    Individual project-specific resources<br>
+                                    will be curated based on chosen capstone topics
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="module-title">Module 11: Career Preparation</div>
+                            <div class="duration">Integrated throughout</div>
+                        </td>
+                        <td>
+                            <div class="topics-list">
+                                <div class="topic-category">Communication Skills:</div>
+                                <div class="topic-item">• Technical writing and documentation</div>
+                                <div class="topic-item">• Presentation and storytelling</div>
+                                <div class="topic-item">• Interview skills and preparation</div>
+                                <div class="topic-item">• Blog post and content creation</div>
+                                
+                                <div class="topic-category">Professional Skills:</div>
+                                <div class="topic-item">• Project management (Agile methodology)</div>
+                                <div class="topic-item">• Industry networking strategies</div>
+                                <div class="topic-item">• Personal branding and LinkedIn</div>
+                                <div class="topic-item">• Mentorship relationships</div>
+                                
+                                <div class="topic-category">Job Search Strategy:</div>
+                                <div class="topic-item">• Resume/CV development</div>
+                                <div class="topic-item">• Job market analysis</div>
+                                <div class="topic-item">• Interview preparation</div>
+                                <div class="topic-item">• Salary negotiations</div>
+                                
+                                <div class="topic-category">Climate Tech Industry:</div>
+                                <div class="topic-item">• Industry landscape overview</div>
+                                <div class="topic-item">• Career path planning</div>
+                                <div class="topic-item">• Skill gap analysis</div>
+                                <div class="topic-item">• Company research techniques</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="hands-on">
+                                <strong>Career Readiness Project:</strong><br>
+                                Students complete comprehensive career preparation through mock interview sessions, industry networking events, resume optimization workshops, and job application strategies, culminating in successful placement in climate tech positions or entrepreneurship ventures.
+                            </div>
+                            <div class="tools">
+                                <strong>Career Tools:</strong><br>
+                                • ATS-friendly resume builders<br>
+                                • Interview preparation platforms<br>
+                                • Job search websites<br>
+                                • Networking event platforms
+                            </div>
+                            <div class="soft-skills">
+                                <strong>Soft Skills:</strong><br>
+                                • Professional communication<br>
+                                • Confidence building<br>
+                                • Network relationship management<br>
+                                • Personal brand development
+                            </div>
+                        </td>
+                        <td>
+                            <div class="resources-box">
+                                <div class="resource-category">📝 Resume Building</div>
+                                <a href="https://github.com/sb2nov/resume" class="resource-link">LaTeX Resume Templates</a>
+                                <a href="https://www.canva.com/resumes/templates/" class="resource-link">Canva Resume Templates</a>
+                                <a href="https://www.overleaf.com/gallery/tagged/cv" class="resource-link">Overleaf CV Templates</a>
+                                
+                                <div class="resource-category">🎯 Interview Preparation</div>
+                                <a href="https://github.com/yangshun/tech-interview-handbook" class="resource-link">Tech Interview Handbook</a>
+                                <a href="https://leetcode.com/" class="resource-link">LeetCode (Free Tier)</a>
+                                <a href="https://www.hackerrank.com/" class="resource-link">HackerRank Practice</a>
+                                
+                                <div class="resource-category">🌐 Professional Networking</div>
+                                <a href="https://www.linkedin.com/" class="resource-link">LinkedIn Professional Network</a>
+                                <a href="https://github.com/" class="resource-link">GitHub for Code Portfolios</a>
+                                <a href="https://stackoverflow.com/" class="resource-link">Stack Overflow Community</a>
+                                
+                                <div class="resource-category">💼 Job Search Platforms</div>
+                                <a href="https://www.indeed.com/" class="resource-link">Indeed Job Search</a>
+                                <a href="https://angel.co/" class="resource-link">AngelList for Startups</a>
+                                <a href="https://www.glassdoor.com/" class="resource-link">Glassdoor Company Research</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        // Make the table more interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to resource links
+            const resourceLinks = document.querySelectorAll('.resource-link');
+            resourceLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                    this.style.transition = 'transform 0.2s ease';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+            
+            // Add smooth scrolling for better navigation
+            const table = document.querySelector('table');
+            if (table) {
+                table.style.scrollBehavior = 'smooth';
+            }
+        });
+        
+        // Function to export table data (placeholder)
+        function exportToCSV() {
+            alert('Export functionality can be implemented based on your needs!');
+        }
+    </script>
+</body>
+</html>
